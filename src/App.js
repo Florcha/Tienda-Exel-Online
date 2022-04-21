@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import Saludo from './components/Saludo';
+import ConHijos from './components/ConHijos';
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
+
 
 function App() {
 
@@ -17,6 +21,11 @@ function App() {
 
   return (
     <>
+      <NavBar></NavBar>
+      <ItemListContainer greeting='Bienvenidos'></ItemListContainer>
+      <ConHijos>
+        <Saludo name='Maria' age='21' nationality='Francia'></Saludo>
+      </ConHijos>
       <h1 style={{color:'pink'}}>Bienvenidos a la tienda Online de EXEL!</h1>
       <li>Facial</li>
       <li>Corporal</li>
