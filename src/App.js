@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import Saludo from './components/Saludo';
 
 function App() {
+
+  const miFuncion = () => {}
 
   const styleP = {
     padding: '15px',
@@ -26,6 +29,8 @@ function App() {
       <button class="btn btn-primary">One</button>
       <button class="btn btn-secondary">Two</button>
       <button class="btn btn-accent btn-outline">Three</button>
+      <Saludo name='Florencia' age='33' nationality='Argentina' action={miFuncion}/>
+      <Saludo name='Luisa' age='50' nationality='Alemania'/>
     </>
   );
 }
