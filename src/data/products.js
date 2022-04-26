@@ -1,5 +1,5 @@
 
-export default products = [
+export const products = [
     {name:'Crema nutritiva', mark:'Exel' },
     {name:'Crema hidratante', mark:'Lidherma' },
     {name:'Gel', mark:'Exel' },
