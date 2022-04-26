@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 
 const ItemListContainer = ( {greeting} ) => {
   return (
@@ -6,4 +6,4 @@ const ItemListContainer = ( {greeting} ) => {
   )
 }
 
-export default ItemListContainer
+export default ItemListContainer*/

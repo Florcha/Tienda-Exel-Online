@@ -1,4 +1,4 @@
-const Saludo = (props) => {
+/*const Saludo = (props) => {
     
     // props.action ===> miFuncion()
     return (
@@ -11,5 +11,5 @@ const Saludo = (props) => {
     )
 }
 
-export default Saludo
+export default Saludo*/
 

@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 
 const ConHijos = (props) => {
   return (
@@ -10,4 +10,4 @@ const ConHijos = (props) => {
   )
 }
 
-export default ConHijos
+export default ConHijos*/

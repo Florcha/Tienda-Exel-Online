@@ -1,11 +1,31 @@
-import logo from './logo.svg';
+/*import logo from './logo.svg';
 import './App.css';
-import Saludo from './components/Saludo';
+/*import Saludo from './components/Saludo';
 import ConHijos from './components/ConHijos';
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+/*import ItemListContainer from './components/ItemListContainer';*/
+
+import React from "react";
+import NavBar from "./components/NavBar";
+import ProductsContainer from "./components/ProductsContainer";
 
 
+function App() {
+  return (
+    <>
+    <div className="App">
+
+    </div>
+    <NavBar></NavBar>
+    <ProductsContainer></ProductsContainer>
+    </>
+  )
+}
+
+export default App;
+
+
+/*
 function App() {
 
   const miFuncion = () => {}
@@ -44,4 +64,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/

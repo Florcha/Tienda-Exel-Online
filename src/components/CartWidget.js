@@ -1,5 +1,5 @@
 
-import React from 'react'
+/*import React from 'react'
 
 const CartWidget = () => {
   return (
@@ -7,4 +7,4 @@ const CartWidget = () => {
   )
 }
 
-export default CartWidget
+export default CartWidget*/
