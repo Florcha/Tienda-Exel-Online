@@ -1,8 +1,8 @@
 
 export const products = [
-    {name:'Crema nutritiva', mark:'Exel' },
-    {name:'Crema hidratante', mark:'Lidherma' },
-    {name:'Gel', mark:'Exel' },
-    {name:'Gel', mark:'Lidherma' },
+    {id: 1, name:'Gel', mark:'Exel' },
+    {id: 2, name:'Crema', mark:'Lidherma' },
+    {id: 3, name:'Enjuague', mark:'Loreal' },
+    {id: 4, name:'Shampoo', mark:'Victus' },
 ]
 

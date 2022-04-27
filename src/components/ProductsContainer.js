@@ -8,15 +8,15 @@ const ProductsContainer = () => {
   useEffect(() => {
     const getProducts = new Promise( (resolve, reject) => {
       setTimeout( () =>{
-        resolve(productsData)
+        reject('error en la promesa')
       }, 5000)
     })
 
-    getProducts.then (result) => {
+    getProducts.then ((result) => {
       console.log('Se completó la promesa', result);
       setProducts(result)
-    }), (err) => {
-      console.log('hubo un error');
+    }).catch((err) => {
+      console.log('hubo un error', err);
     })
 
     console.log('Se terminó el efecto');
@@ -25,7 +25,7 @@ const ProductsContainer = () => {
   
   return (
     <div>
-      {products.map( products => products.name )}
+      {products.map( products => <ProductsCard key={products.id} productsData={products}/>)}
     </div>
   )
 }

@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 
 import React from "react";
 import NavBar from "./components/NavBar";
+import ProductCard from "./components/ProductCard";
 import ProductsContainer from "./components/ProductsContainer";
 
 
@@ -18,6 +19,7 @@ function App() {
     </div>
     <NavBar></NavBar>
     <ProductsContainer></ProductsContainer>
+    <ProductCard></ProductCard>
     </>
   )
 }
