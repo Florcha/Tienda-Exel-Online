@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { products as productsData } from "../data/products";
+import  ProductCard  from "./ProductCard";
+import { products as productsList }  from "../data/products";
 
 const ProductsContainer = () => {
   
@@ -8,7 +9,7 @@ const ProductsContainer = () => {
   useEffect(() => {
     const getProducts = new Promise( (resolve, reject) => {
       setTimeout( () =>{
-        reject('error en la promesa')
+        resolve([productsList])
       }, 5000)
     })
 
@@ -25,7 +26,7 @@ const ProductsContainer = () => {
   
   return (
     <div>
-      {products.map( products => <ProductsCard key={products.id} productsData={products}/>)}
+      {products.map( product => <ProductCard key={product.id} productsData={product}/>)}
     </div>
   )
 }
