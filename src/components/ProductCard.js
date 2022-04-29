@@ -1,12 +1,13 @@
 import React from 'react'
 
-const ProductCard = (productsData) => {
+const ProductCard = ({productsData}) => {
   return (
-    <div style={{border:'solid pink 2px', margin:'20px', padding: '20px'}}>
+    <div style={{border:'solid pink 2px', margin:'20px', padding: '20px', fontFamily: 'white'}}>
         <strong>{productsData.name}</strong>
         <div>{productsData.mark}</div>
     </div>
   )
-}
+  }
+
 
 export default ProductCard

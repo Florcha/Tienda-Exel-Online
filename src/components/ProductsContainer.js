@@ -9,7 +9,7 @@ const ProductsContainer = () => {
   useEffect(() => {
     const getProducts = new Promise( (resolve, reject) => {
       setTimeout( () =>{
-        resolve([productsList])
+        resolve(productsList)
       }, 5000)
     })
 
