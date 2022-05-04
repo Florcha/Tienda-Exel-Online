@@ -1,34 +1,27 @@
-import { useEffect, useState } from "react";
-import  ProductCard  from "./ProductCard";
-import { products as productsList }  from "../data/products";
+import React, { useEffect, useState } from "react";
+import { getProducts } from "../data/getProducts";
+import ProductsList from "../components/ProductsList";
+
 
 const ProductsContainer = () => {
-  
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const getProducts = new Promise( (resolve, reject) => {
-      setTimeout( () =>{
-        resolve(productsList)
-      }, 5000)
-    })
+    setIsLoading(true)
+    getProducts()
+      .then((result) => setProducts(result))
+      .catch((error) => console.log(error))
+      .finally(() => setIsLoading(false));
+  }, []);
 
-    getProducts.then ((result) => {
-      console.log('Se completó la promesa', result);
-      setProducts(result)
-    }).catch((err) => {
-      console.log('hubo un error', err);
-    })
-
-    console.log('Se terminó el efecto');
-  }, [])
-  
-  
   return (
-    <div>
-      {products.map( product => <ProductCard key={product.id} productsData={product}/>)}
-    </div>
-  )
-}
+      <>
+        <h1 style={{margin: 12}}>SECCIÓN EN CONSTRUCCIÓN</h1>
+        <ProductsList products={products}/>
+      </>
+  );
+};
 
-export default ProductsContainer
+
+export default ProductsContainer;
