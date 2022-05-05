@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 /*import ItemListContainer from './components/ItemListContainer';*/
 
 import React from "react";
+import { BrowserRouter, Switch, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import ProductsContainer from "./components/ProductsContainer";
 
@@ -16,7 +17,14 @@ function App() {
     <div className="App">
 
     </div>
-    <NavBar></NavBar>
+      <BrowserRouter>
+        <NavBar></NavBar>
+          <Routes>
+            <Route path="/" element={<Saludo name='Flor' age='33'/>}/>
+            <Route path="products" element={<ProductsContainer/>}/>
+          </Routes>
+      </BrowserRouter>
+    
     <ProductsContainer></ProductsContainer>
     </>
   )
