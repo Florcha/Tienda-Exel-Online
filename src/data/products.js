@@ -1,40 +1,21 @@
-/*import React from "react";
-
-const Products = ({ products }) => {
-    return (
-        <>
-          <h1 style={{padding: 25, margin: 25}}>Productos BioCosmética EXEL</h1>
-            <div style={{display: 'flex', flexWrap: 'wrap'}}>
-              {products.map((product) => (
-                <div key={product.id} style={{display:"flex", flexDrection: "column", alignItems: "center", border: "2px solid pink", padding: 25, margin: 25}}>
-                  <h1> {product.name} </h1>
-                  <h2> Marca: {product.mark} </h2>
-                
-                </div>        
-            ))}
-            </div>
-        </>
-    );
-};
-
-export default Products*/
-
 
 export const products = [
     {
         id: 1, 
         name:'Gel', 
         mark:'Exel',
-        category: '',
-        pictureUrl: 'Facial'
+        category: 'Facial',
+        pictureUrl: 
+        'https://www.heavenimagenes.com/heavencommerce/cbed7736-4c76-4fd0-b719-9ff071142423/images/v2/EXEL/2007151124473576_01_medium.jpg'
     },
 
     {
         id: 2, 
         name:'Crema', 
         mark:'Lidherma',
-        category: '',
-        pictureUrl: 'Corporal'
+        category: 'Corporal',
+        pictureUrl: 
+        'https://www.lidherma.com/thumbnails/ldh_skinbioma_facecream_450x450.jpg'
     },
 
     {
@@ -42,16 +23,18 @@ export const products = [
         name:'Enjuague', 
         mark:'Loreal',
         category: 'Cabello',
-        pictureUrl: ''
+        pictureUrl: 
+        'https://http2.mlstatic.com/D_NQ_NP_613395-MLA32318582398_092019-W.jpg'
     },
 
     {  
         id: 4, 
         name:'Shampoo', 
-        mark:'Victus',
+        mark:'Nexxus',
         category: 'Cabello',
-        pictureUrl: ''
+        pictureUrl: 
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAvS6sJ9OE641OmT0EBZSAzKb7R0JcwRieEQ&usqp=CAU'
     },
 ];
 
-/*export default Products*/
+

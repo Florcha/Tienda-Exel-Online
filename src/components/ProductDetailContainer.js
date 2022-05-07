@@ -1,3 +1,4 @@
+/*import { useCallback } from "react";*/
 import { getProducts } from "../components/ProductDetailContainer";
 
 useEffect(() => {

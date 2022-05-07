@@ -6,7 +6,7 @@ import NavBar from './components/NavBar';
 /*import ItemListContainer from './components/ItemListContainer';*/
 
 import React from "react";
-import { BrowserRouter, Switch, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import ProductsContainer from "./components/ProductsContainer";
 import ProductDetailContainer from "./components/ProductDetailContainer";
