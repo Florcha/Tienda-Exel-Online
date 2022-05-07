@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { getProducts } from "../data/getProducts";
 import ProductsList from "../components/ProductsList";
+import { useParams } from 'react-router-dom';
 
 
 const ProductsContainer = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const { category } = useParams ()
+  console.log(category);
 
   useEffect(() => {
     setIsLoading(true)

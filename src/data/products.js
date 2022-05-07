@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 
 const Products = ({ products }) => {
     return (
@@ -17,44 +17,41 @@ const Products = ({ products }) => {
     );
 };
 
-export default Products
+export default Products*/
 
 
-
-
-
-
-
-/*
 export const products = [
     {
         id: 1, 
         name:'Gel', 
-        mark:'Exel' 
-        pictureUrl: ''
+        mark:'Exel',
+        category: '',
+        pictureUrl: 'Facial'
     },
 
     {
         id: 2, 
         name:'Crema', 
-        mark:'Lidherma' 
-        pictureUrl: ''
+        mark:'Lidherma',
+        category: '',
+        pictureUrl: 'Corporal'
     },
 
     {
         id: 3, 
         name:'Enjuague', 
-        mark:'Loreal' 
+        mark:'Loreal',
+        category: 'Cabello',
         pictureUrl: ''
     },
 
     {  
         id: 4, 
         name:'Shampoo', 
-        mark:'Victus' 
+        mark:'Victus',
+        category: 'Cabello',
         pictureUrl: ''
     },
 ];
 
-export default Products
-*/
+/*export default Products*/

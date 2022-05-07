@@ -5,3 +5,7 @@ export const getProducts = () => {
         setTimeout(() => resolve(products), 2000);
     });
 };
+
+export const getproduct = (id) => {
+    
+}

@@ -9,6 +9,8 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import ProductsContainer from "./components/ProductsContainer";
+import ProductDetailContainer from "./components/ProductDetailContainer";
+import ProductDetail from "./components/ProductDetail";
 
 
 function App() {
@@ -20,12 +22,16 @@ function App() {
       <BrowserRouter>
         <NavBar></NavBar>
           <Routes>
-            <Route path="/" element={<Saludo name='Flor' age='33'/>}/>
-            <Route path="products" element={<ProductsContainer/>}/>
+            <Route path="/" element={<h1>Home</h1>}/>
+            <Route path="products" element={<ProductsContainer />} />
+            <Route path="products/:category" element={<ProductsContainer />} />
+            <Route path="products/:id" element={<ProductDetailContainer />} />
           </Routes>
       </BrowserRouter>
     
     <ProductsContainer></ProductsContainer>
+    <ProductDetailContainer></ProductDetailContainer>
+    <ProductDetail></ProductDetail>
     </>
   )
 }
