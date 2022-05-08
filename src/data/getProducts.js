@@ -1,9 +1,10 @@
 import { products } from './products';
 
 export const getProducts = () => {
-    return new Promise((resolve, reject) => {
+    /*return new Promise((resolve, reject) => {
         setTimeout(() => resolve(products), 2000);
-    });
+    });*/
+    return products 
 };
 
 export const getproduct = (id) => {

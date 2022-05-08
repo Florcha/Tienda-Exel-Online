@@ -7,8 +7,8 @@ useEffect(() => {
         .then((result) =>
             setProducts (
                 category
-                result.filter((item) => item.category === category)
-                : result
+                    ? result.filter((item) => item.category === category)
+                    : result
             )
         )
         .catch((error) => console.log.apply(error))

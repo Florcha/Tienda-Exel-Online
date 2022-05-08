@@ -11,20 +11,33 @@ const ProductsContainer = () => {
   console.log(category);
 
   useEffect(() => {
-    setIsLoading(true)
+    /*setIsLoading(true)*/
     getProducts()
       .then((result) => setProducts(result))
-      .catch((error) => console.log(error))
+      .catch((error) => setProducts([]) /*console.log(error))*/
       .finally(() => setIsLoading(false));
   }, []);
 
-  return (
+    return (
       <>
-        <h1 style={{margin: 12}}>SECCIÓN EN CONSTRUCCIÓN</h1>
-        <ProductsList products={products}/>
+      {products.length ===0?
+        <>
+          <p></p>
+        </>
+        :
+        <>
+          <p></p>
+        </>
+      }
       </>
-  );
+    )
 };
+        /*<h1 style={{margin: 12}}>SECCIÓN EN CONSTRUCCIÓN</h1>
+        <ProductsList products={products}/>
+      
+      
+  );
+};*/
 
 
 export default ProductsContainer;
