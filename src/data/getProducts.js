@@ -5,6 +5,6 @@ export const getProducts = () => {
 };
 
 export const getProduct = (id) => {
-  const product = products.find((p) => p.id === id);
+  const product = products.find((p) => p.id === Number (id));
   return Promise.resolve(product);
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ProductCard from "../../components/cart/ProductCard";
+import ProductDetail from "../../components/cart/ProductDetail";
 import LoadingSpinner from "../../components/common/LoadingSpinner";
 import { getProduct } from "../../data/getProducts";
 
@@ -23,7 +23,7 @@ const ProductDetailContainer = () => {
   return isLoading ? (
     <LoadingSpinner text='Cargando productos...' />
   ) : (
-    <ProductCard product={product} />
+    <ProductDetail product={product} />
   );
 };
 
