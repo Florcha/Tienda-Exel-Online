@@ -9,6 +9,7 @@ function App() {
   return (
     <>
       <div className="App">
+      <CartProvider>
         <BrowserRouter>
           <NavBar></NavBar>
           <Routes>
@@ -18,7 +19,7 @@ function App() {
             <Route path="product/:id" element={<ProductDetailContainer />} />
           </Routes>
         </BrowserRouter>
-        <CartProvider></CartProvider>
+      </CartProvider>
       </div>
     </>
   )
