@@ -1,29 +1,35 @@
-import React from 'react';
-import { CartConsumer } from '../../context/CartContextProvider';
+import { useState } from "react";
+import { useCartContext } from "../../context/CartContextProvider";
+import GoToCart from "../../components/cart/GoToCar";
+import ProductCount from "../../context/ProductCount";
 
 const ProductDetail = ({ product }) => {
-  console.log(product)
+  const { name, price, imgUrl, stock, id } = product;
+  const [countToAdd, setCountToAdd] = useState(0);
+  const { addToCart, unitsPerProduct } = useCartContext();
+
+  const handleOnAdd = (count) => {
+    if (count + unitsPerProduct(id) > stock) {
+      const availableToAdd = stock - unitsPerProduct(id);
+      return alert(`Agregar sólo ${availableToAdd} productos`);
+    }
+    setCountToAdd(count);
+    addToCart(product, count);
+  };
+
   return (
-    <CartConsumer>
-      {/* Estos son los metodos que expones en el CartContextProvider, desde aqui podes accederlos */}
-      {({ productList, addToCart, emptyCart, deleteById, totalCount, totalPrice, removeOneUnit, unitsPerProduct, }) => (
-        <div>
-          <article className="detail">
-            <img alt="Product" src={product.pictureUrl} />
-            <h1>{product.productName}</h1>
-            <p>${product.price}</p>
-          </article>
-          {/* Añade aqui la logica para que se añadan al carrito y demas */}
-          <button>
-            Decrement
-          </button>
-          <button>
-            Increment
-          </button>
-        </div>
+    <div>
+      <h3>{name}</h3>
+      <img src={imgUrl} alt={name} />
+      <h4>Precio: ${price}</h4>
+      <h4>Stock: {stock} unidades</h4>
+      {countToAdd === 0 ? (
+        <ProductCount stock={stock} initial={1} onAdd={handleOnAdd} />
+      ) : (
+        <GoToCart/>
       )}
-    </CartConsumer>
-  )
+    </div>
+  );
 }
 
 export default ProductDetail;
