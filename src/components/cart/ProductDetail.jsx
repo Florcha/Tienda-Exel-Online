@@ -1,5 +1,5 @@
 import React from 'react';
-import { CartConsumer } from '../../context/CartContext';
+import { CartConsumer } from '../context/CartContextProvider';
 
 const ProductDetail = ({ product }) => {
   console.log(product)
