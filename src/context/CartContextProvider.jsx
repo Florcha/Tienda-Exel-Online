@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 
 export const CartContext = createContext({});
@@ -63,7 +63,7 @@ const CartContextProvider = ({ children }) => {
   };
 
   return (
-    <CartContext
+    <CartContext.Provider
       value={{
         productList,
         addToCart,
@@ -76,11 +76,24 @@ const CartContextProvider = ({ children }) => {
       }}
     >
       {children}
-    </CartContext>
+    </CartContext.Provider>
   );
 };
 
-export default CartContextProvider;
+function CartConsumer({ children }) {
+  return (
+    <CartContext.Consumer>
+      {context => {
+        if (context === undefined) {
+          throw new Error('CartConsumer must be used within a CartContextProvider')
+        }
+        return children(context);
+      }}
+    </CartContext.Consumer>
+  )
+}
+
+export { CartContextProvider, CartConsumer };
 
 /*import React from "react";
 const CartContext = React.createContext();

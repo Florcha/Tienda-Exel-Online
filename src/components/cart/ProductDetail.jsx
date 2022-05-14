@@ -1,22 +1,23 @@
 import React from 'react';
-import { CartConsumer } from '../context/CartContextProvider';
+import { CartConsumer } from '../../context/CartContextProvider';
 
 const ProductDetail = ({ product }) => {
   console.log(product)
   return (
     <CartConsumer>
-      {({ state, dispatch }) => (
+      {/* Estos son los metodos que expones en el CartContextProvider, desde aqui podes accederlos */}
+      {({ productList, addToCart, emptyCart, deleteById, totalCount, totalPrice, removeOneUnit, unitsPerProduct, }) => (
         <div>
           <article className="detail">
             <img alt="Product" src={product.pictureUrl} />
             <h1>{product.productName}</h1>
             <p>${product.price}</p>
           </article>
-          <div>{state.count}</div>
-          <button onClick={() => dispatch({ type: 'decrement' })}>
+          {/* Añade aqui la logica para que se añadan al carrito y demas */}
+          <button>
             Decrement
           </button>
-          <button onClick={() => dispatch({ type: 'increment' })}>
+          <button>
             Increment
           </button>
         </div>
