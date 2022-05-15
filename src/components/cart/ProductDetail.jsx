@@ -11,7 +11,7 @@ const ProductDetail = ({ product }) => {
   const handleOnAdd = (count) => {
     if (count + unitsPerProduct(id) > stock) {
       const availableToAdd = stock - unitsPerProduct(id);
-      return alert(`Agregar sólo ${availableToAdd} productos`);
+      return alert(`Agregar tu ${availableToAdd} producto`);
     }
     setCountToAdd(count);
     addToCart(product, count);
