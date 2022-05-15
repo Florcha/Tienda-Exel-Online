@@ -4,7 +4,7 @@ import GoToCart from "../../components/cart/GoToCar";
 import ProductCount from "../../context/ProductCount";
 
 const ProductDetail = ({ product }) => {
-  const { name, price, imgUrl, stock, id } = product;
+  const { name, price, pictureUrl, stock, id } = product;
   const [countToAdd, setCountToAdd] = useState(0);
   const { addToCart, unitsPerProduct } = useCartContext();
 
@@ -20,7 +20,7 @@ const ProductDetail = ({ product }) => {
   return (
     <div>
       <h3>{name}</h3>
-      <img src={imgUrl} alt={name} />
+      <img src={pictureUrl} alt={name} />
       <h4>Precio: ${price}</h4>
       <h4>Stock: {stock} unidades</h4>
       {countToAdd === 0 ? (
