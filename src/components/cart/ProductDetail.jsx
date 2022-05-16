@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useCartContext } from "../../context/CartContextProvider";
-import GoToCart from "../../components/cart/GoToCar";
+import GoToCart from "../../components/cart/GoToCart";
 import ProductCount from "../../context/ProductCount";
+
+import "./ProductDetail.css";
 
 const ProductDetail = ({ product }) => {
   const { name, price, pictureUrl, stock, id } = product;
@@ -18,9 +20,9 @@ const ProductDetail = ({ product }) => {
   };
 
   return (
-    <div>
+    <div className="card">
       <h3>{name}</h3>
-      <img src={pictureUrl} alt={name} />
+      <img src={pictureUrl} alt={name} className="card-img" />
       <h4>Precio: ${price}</h4>
       <h4>Stock: {stock} unidades</h4>
       {countToAdd === 0 ? (
