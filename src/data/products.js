@@ -16,7 +16,7 @@ export const products = [
         mark:'Lidherma',
         category: 'Corporal',
         price:' 2.900',
-        sotck:'300',
+        stock:'300',
         pictureUrl: 
         'https://www.lidherma.com/thumbnails/ldh_skinbioma_facecream_450x450.jpg'
     },
