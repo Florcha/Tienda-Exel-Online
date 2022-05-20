@@ -1,15 +1,15 @@
 import { useCartContext } from "../../context/CartContextProvider";
-import CartProduct from "../CartProduct/CartProduct";
+import CartProduct from "./CartProduct";
 
 const Cart = () => {
-  const { cartList, emptyCart, totalPrice } = useCartContext();
+  const { productList, emptyCart, totalPrice } = useCartContext();
 
   return (
     <div>
-      {cartList.map((item) => (
-        <CartProduct key={item.id} item={item} />
+      {productList.map((item) => (
+        <CartProduct key={item.id} product={item} />
       ))}
-      {cartList.length > 0 ? (
+      {productList.length > 0 ? (
         <>
           <button onClick={() => emptyCart()}>Vaciar Carrito</button>
           <h1>Precio total: ${totalPrice()}</h1>
