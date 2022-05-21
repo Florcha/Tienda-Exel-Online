@@ -6,6 +6,7 @@ import NavBar from "./components/common/NavBar";
 import ProductDetailContainer from "./components/containers/ProductDetailContainer";
 import ProductListContainer from "./components/containers/ProductListContainer";
 import { CartContextProvider } from "./context/CartContextProvider";
+/*import dataToFirebase from "../src/jsonToFirestore";*/
 
 
 function App() {
