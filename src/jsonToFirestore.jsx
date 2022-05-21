@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, query, where, getDocs, getDoc, setDoc, doc, addDoc} from 'firebase/firestore/lite'
-import { initializeApp } from "firebase/app";
+import { getFirestore } from 'firebase/firestore/lite'
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyCsO9ZtR486hZJ2GY_HjLsJm3GaKNvBXww",
@@ -13,10 +13,10 @@ const firebaseConfig = {
 };
   
   
-initializeApp(firebaseConfig);
-/*const db = getFirestore(app);*/
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-
+/*
 const PRODUCTS = [
     {
         id: 1, 
@@ -76,4 +76,4 @@ const PRODUCTS = [
     });
 }
 
-export default dataToFirebase;
+export default dataToFirebase;*/
