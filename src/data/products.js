@@ -4,7 +4,7 @@ export const products = [
         productName:'Gel', 
         mark:'Exel',
         category: 'Facial',
-        price:' 1100',
+        price: 1100,
         stock:'150',
         pictureUrl: 
         'https://www.heavenimagenes.com/heavencommerce/cbed7736-4c76-4fd0-b719-9ff071142423/images/v2/EXEL/2007151124473576_01_medium.jpg'
@@ -15,7 +15,7 @@ export const products = [
         productName:'Crema', 
         mark:'Lidherma',
         category: 'Corporal',
-        price:' 2900',
+        price: 2900,
         stock:'300',
         pictureUrl: 
         'https://www.lidherma.com/thumbnails/ldh_skinbioma_facecream_450x450.jpg'
@@ -26,7 +26,7 @@ export const products = [
         productName:'Enjuague', 
         mark:'Loreal',
         category: 'Cabello',
-        price:' 1200',
+        price: 1200,
         stock:'100',
         pictureUrl: 
         'https://http2.mlstatic.com/D_NQ_NP_613395-MLA32318582398_092019-W.jpg'
@@ -37,7 +37,7 @@ export const products = [
         productName:'Shampoo', 
         mark:'Nexxus',
         category: 'Cabello',
-        price:' 1900',
+        price: 1900,
         stock:'210',
         pictureUrl: 
         'https://images.ulta.com/is/image/Ulta/2049094?op_sharpen=1&resMode=bilin&qlt=85&wid=800&hei=800&fmt=jpg'
