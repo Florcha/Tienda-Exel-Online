@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import ProductList from "../../components/cart/ProductList";
 import LoadingSpinner from "../../components/common/LoadingSpinner";
-import { getProducts } from "../../data/getProducts";
+import { getProducts } from "../../jsonToFirestore";
+
 
 
 const ProductListContainer = () => {
