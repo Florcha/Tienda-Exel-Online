@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductDetail from "../../components/cart/ProductDetail";
-import { getProduct } from "../../data/getProducts";
+import { getProduct } from "../../jsonToFirestore";
 
 import "./ProductDetailContainer.css";
 

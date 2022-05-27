@@ -13,13 +13,9 @@ const ProductListContainer = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    getProducts()
+    getProducts(category)
       .then((result) => {
-        setProducts(
-          category
-            ? result.filter((item) => item.category === category)
-            : result
-        );
+        setProducts(result);
       })
       .catch((error) => console.log.apply(error))
       .finally(() => setIsLoading(false));

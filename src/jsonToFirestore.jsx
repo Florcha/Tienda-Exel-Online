@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite'
+import { getFirestore, query, where, collection, getDocs } from 'firebase/firestore/lite'
 
 
 const firebaseConfig = {
@@ -23,10 +23,21 @@ async function getCollection(value) {
   return snapshot.docs.map(doc => doc.data());
 }
 
-async function getProducts() {
-  const value = getCollection('products');
-  console.log(value);
-  return value;
+async function getProducts(category) {
+  if (category) {
+    const q = query(collection(db, 'products'), where('category', '==', category));
+    const snapshot = await getDocs(q);
+    return snapshot.docs.map(doc => doc.data());
+  } else {
+    return getCollection('products');
+  }
 }
 
-export { getProducts };
+async function getProduct(id) {
+  console.log(typeof +id);
+  const q = query(collection(db, 'products'), where('id', '==', +id));
+  const snapshot = await getDocs(q);
+  return snapshot.docs.map(doc => doc.data())[0];
+}
+
+export { getProducts, getProduct };
