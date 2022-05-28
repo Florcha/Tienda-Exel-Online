@@ -6,6 +6,7 @@ import ProductDetailContainer from "./components/containers/ProductDetailContain
 import ProductListContainer from "./components/containers/ProductListContainer";
 import { CartContextProvider } from "./context/CartContextProvider";
 import Form from "./components/common/Form";
+import {  View, Text, Image, StyleSheet } from "react-native";
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         <BrowserRouter>
           <NavBar></NavBar>
           <Routes>
-            <Route path="/" element={<h1>Home</h1>} />
+            <Route path="portada" element={<PortadaPrincipal />} />
             <Route path="products" element={<ProductListContainer />} />
             <Route path="products/:category" element={<ProductListContainer />} />
             <Route path="product/:id" element={<ProductDetailContainer />} />
