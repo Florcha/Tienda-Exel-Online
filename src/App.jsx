@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Cart from "./components/cart/Cart";
-/*import Cart from "./components/cart/Cart";*/
 import NavBar from "./components/common/NavBar";
 import ProductDetailContainer from "./components/containers/ProductDetailContainer";
 import ProductListContainer from "./components/containers/ProductListContainer";
 import { CartContextProvider } from "./context/CartContextProvider";
+import Form from "./components/common/Form";
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
             <Route path="products" element={<ProductListContainer />} />
             <Route path="products/:category" element={<ProductListContainer />} />
             <Route path="product/:id" element={<ProductDetailContainer />} />
+            <Route path="form" element={<Form />} />
             <Route path="cart" element={<Cart />} />
           </Routes>
         </BrowserRouter>      
