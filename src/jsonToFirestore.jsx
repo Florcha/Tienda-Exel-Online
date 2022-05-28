@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, query, where, collection, getDocs } from 'firebase/firestore/lite'
+import { getFirestore, query, where, collection, getDocs, getDoc, doc } from 'firebase/firestore/lite'
+
 
 
 const firebaseConfig = {
@@ -34,10 +35,9 @@ async function getProducts(category) {
 }
 
 async function getProduct(id) {
-  console.log(typeof +id);
-  const q = query(collection(db, 'products'), where('id', '==', +id));
-  const snapshot = await getDocs(q);
-  return snapshot.docs.map(doc => doc.data())[0];
+  const documentByld = doc(db, 'products', id);
+    const snapshot = await getDoc(documentByld);
+    return snapshot.data();
 }
 
 export { getProducts, getProduct };
