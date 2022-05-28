@@ -13,6 +13,7 @@ const NavBar = () => {
           <Link to="/products/Facial" className="mr-5 hover:text-gray-900">Facial</Link>
           <Link to="/products/Corporal" className="mr-5 hover:text-gray-900">Corporal</Link>
           <Link to="/products/Cabello" className="mr-5 hover:text-gray-900">Cabello</Link>
+          <Link to="form" className="mr-5 hover:text-gray-900">Contacto</Link>
         </nav>
         <Link to="/" className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
           {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
