@@ -1,19 +1,18 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, Image} from "react-native";
- 
- 
-export default function App() {
+
+
+export default function PortadaPrincipal() {
   return (
-    <View style={styles.container}>
-        <StatusBar style="auto" />
-        <Text></Text>
-         
-        <Image
-          style={{ width: 100, height: 100, marginBottom: 15 }}
-          source={require("../../../assets/ENCABEZADO-NU-NATURAL.jpg")}
-        />
-        
-    </View>
+    <>
+      <img alt=""
+        style={{ height: '80%', margin: 'auto', display: 'block' }}
+        src={"assets/ENCABEZADO-NU-NATURAL.jpg"}
+      />
+      <img alt=""
+        style={{ height: '80%', margin: 'auto', display: 'block' }}
+        src={"assets/EXEL-BOUTIQUE.jpg"}
+      />
+
+    </>
   );
 }
