@@ -14,17 +14,17 @@ export default function App() {
   }
 
   function onSubmit() {
-    const { name, surname, age } = data;
-    console.log(`Your name is ${name} ${surname} and you have ${age} years`);
+    const { name, phone, order } = data;
+    console.log(`Your name is ${name} your phone number is ${phone} and you have ${order}`);
   }
 
   return (
     <>
       <div>
         <>
-          <div style={{ display: 'flex', marginBottom: 8 }}>
-            <label style={{ marginRight: 4 }}>Nombre</label>
-            <input
+          <div style={{ display: 'flex', marginBottom: 5 }}>
+            <label style={{ marginRight: 20 }}>Nombre y Apellido</label>
+            <input className="btn-go-to-cart"
               type="text"
               name="name"
               onChange={(evt) => handleChange(evt)}
@@ -32,35 +32,34 @@ export default function App() {
           </div>
         </>
         <>
-          <div style={{ display: 'flex', marginBottom: 8 }}>
-            <label style={{ marginRight: 4 }}>Apellido</label>
-            <input
+          <div style={{ display: 'flex', marginBottom: 5 }}>
+            <label style={{ marginRight: 20 }}>Teléfono</label>
+            <input className="btn-go-to-cart"
               type="text"
-              name="surname"
+              name="phone"
               onChange={(evt) => handleChange(evt)}
             />
           </div>
         </>
         <>
-          <div style={{ display: 'flex', marginBottom: 8 }}>
-            <label style={{ marginRight: 4 }}>Edad</label>
-            <input
+          <div style={{ display: 'flex', marginBottom: 5 }}>
+            <label style={{ marginRight: 20 }}>Pedido</label>
+            <input className="btn-go-to-cart"
               type="text"
-              name="age"
+              name="order"
               onChange={(evt) => handleChange(evt)}
             />
           </div>
         </>
 
         {
-          <button
+          <button className="btn-go-to-cart"
             disabled={
-              !(data.name !== '' && data.surname !== '' && data.age !== '')
+              !(data.name !== '' && data.phone !== '' && data.order !== '')
             }
             onClick={(evt) => onSubmit(evt)}
-            style={{}}
           >
-            Generar Pedido
+            Generar Orden
           </button>
         }
       </div>
