@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, query, where, collection, getDocs, getDoc, doc } from 'firebase/firestore/lite'
+import { getFirestore, query, where, collection, getDocs, getDoc, doc, addDoc } from 'firebase/firestore/lite'
 
 
 
@@ -19,38 +19,42 @@ const db = getFirestore(app);
 
 // Get a list of cities from your database
 async function getCollection(value) {
-    const collectionData = collection(db, value);
-    const snapshot = await getDocs(collectionData);
-    return convertSnapshot(snapshot);
-}
-  
-  async function getProducts(category) {
-    if (category) {
-      const q = query(collection(db, 'products'), where('category', '==', category));
-      const snapshot = await getDocs(q);
-      return convertSnapshot(snapshot);
-    } else {
-      return getCollection('products');
-    }
-}
-  
-  async function getProduct(id) {
-    try {
-      const documentById = doc(db, 'products', id);
-      const snapshot = await getDoc(documentById);
-      return { id, ...snapshot.data() };
-    } catch (error) {
-      console.error(error);
-      return {};
-    }
-}
-  
-  function convertSnapshot(snapshot) {
-    return snapshot.docs.map(d => {
-      const data = d.data();
-      const id = d.id;
-      return { id, ...data };
-    });
+  const collectionData = collection(db, value);
+  const snapshot = await getDocs(collectionData);
+  return convertSnapshot(snapshot);
 }
 
-export { getProducts, getProduct };
+async function getProducts(category) {
+  if (category) {
+    const q = query(collection(db, 'products'), where('category', '==', category));
+    const snapshot = await getDocs(q);
+    return convertSnapshot(snapshot);
+  } else {
+    return getCollection('products');
+  }
+}
+
+async function getProduct(id) {
+  try {
+    const documentById = doc(db, 'products', id);
+    const snapshot = await getDoc(documentById);
+    return { id, ...snapshot.data() };
+  } catch (error) {
+    console.error(error);
+    return {};
+  }
+}
+
+function convertSnapshot(snapshot) {
+  return snapshot.docs.map(d => {
+    const data = d.data();
+    const id = d.id;
+    return { id, ...data };
+  });
+}
+
+async function saveMessage(data) {
+  return addDoc(collection(db, 'messages'), data);
+}
+
+export { getProducts, getProduct, saveMessage };

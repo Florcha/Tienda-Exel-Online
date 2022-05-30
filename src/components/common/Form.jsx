@@ -1,67 +1,86 @@
 import React, { useState } from "react";
+import { saveMessage } from "../../jsonToFirestore";
+import { useNavigate  } from "react-router-dom";
+
 
 import "./Form.css";
 
-export default function App() {
+export default function Form() {
+
+  let navigate = useNavigate();
+
   const [data, setData] = useState({
     name: '',
-    surname: '',
-    age: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
   });
 
   function handleChange(evt) {
     setData({ ...data, [evt.target.name]: evt.target.value });
   }
 
-  function onSubmit() {
-    const { name, phone, order } = data;
-    console.log(`Your name is ${name} your phone number is ${phone} and you have ${order}`);
+  async function onSubmit(e) {
+    e.preventDefault();
+    console.log(data);
+    await saveMessage(data);
+    navigate("/");
+    alert('Mensaje enviado');
   }
 
   return (
     <>
       <div>
-        <>
-          <div style={{ display: 'flex', marginBottom: 5 }}>
-            <label style={{ marginRight: 20 }}>Nombre y Apellido</label>
-            <input className="btn-go-to-cart"
-              type="text"
-              name="name"
-              onChange={(evt) => handleChange(evt)}
-            />
-          </div>
-        </>
-        <>
-          <div style={{ display: 'flex', marginBottom: 5 }}>
-            <label style={{ marginRight: 20 }}>Teléfono</label>
-            <input className="btn-go-to-cart"
-              type="text"
-              name="phone"
-              onChange={(evt) => handleChange(evt)}
-            />
-          </div>
-        </>
-        <>
-          <div style={{ display: 'flex', marginBottom: 5 }}>
-            <label style={{ marginRight: 20 }}>Pedido</label>
-            <input className="btn-go-to-cart"
-              type="text"
-              name="order"
-              onChange={(evt) => handleChange(evt)}
-            />
-          </div>
-        </>
+        <div className="contact_form">
 
-        {
-          <button className="btn-go-to-cart"
-            disabled={
-              !(data.name !== '' && data.phone !== '' && data.order !== '')
-            }
-            onClick={(evt) => onSubmit(evt)}
-          >
-            Generar Orden
-          </button>
-        }
+          <div className="formulario">
+            <h1>Formulario de contacto</h1>
+            <h4>Escríbenos y en breve los pondremos en contacto contigo</h4>
+
+            <form onSubmit={d => onSubmit(d)}>
+              <p>
+                <label htmlFor="nombre">Nombre
+                  <span className="obligatorio">*</span>
+                </label>
+                <input type="text" name="name" onChange={(evt) => handleChange(evt)} required placeholder="Escribe tu nombre" />
+              </p>
+
+              <p>
+                <label htmlFor="email">Email
+                  <span className="obligatorio">*</span>
+                </label>
+                <input type="email" name="email" onChange={(evt) => handleChange(evt)} required placeholder="Escribe tu Email" />
+              </p>
+
+              <p>
+                <label htmlFor="telefone">Teléfono</label>
+                <input type="tel" name="phone" onChange={(evt) => handleChange(evt)} placeholder="Escribe tu teléfono" />
+              </p>
+
+              <p>
+                <label htmlFor="asunto">Asunto
+                  <span className="obligatorio">*</span>
+                </label>
+                <input type="text" name="subject" onChange={(evt) => handleChange(evt)} required placeholder="Escribe un asunto" />
+              </p>
+
+              <p>
+                <label htmlFor="mensaje">Mensaje
+                  <span className="obligatorio">*</span>
+                </label>
+                <textarea name="message" onChange={(evt) => handleChange(evt)} required placeholder="Deja aquí tu comentario..."></textarea>
+              </p>
+
+              <button className="btn-contact" type="submit"><p>Enviar</p></button>
+
+              <p className="aviso">
+                <span className="obligatorio"> * </span>los campos son obligatorios.
+              </p>
+
+            </form>
+          </div>
+        </div>
       </div>
     </>
   );
