@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import "./ProductCard.css";
+
 const ProductCard = ({ product }) => {
   return (
     <Link to={'/product/' + product.id}>
-      <div style={{ border: 'solid black 1px', margin: '20px', padding: '20px', fontFamily: 'white' }}>
-        <img src={product.pictureUrl} alt={product.productName} style={{ width: '150px', height: '150px'}}/>
+      <div className='divCont'>
+        <img className="imgCard" src={product.pictureUrl} alt={product.productName} />
         <strong>{product.productName}</strong>
         <div>{product.mark}</div>
       </div>
