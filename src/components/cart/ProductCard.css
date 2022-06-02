@@ -6,9 +6,11 @@
     margin: 20px; 
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
+    height: 80%;
+    border-radius: 20px;
 }
 
 .imgCard {
     width: 230px;
-    height: 300px;
+    height: 300px !important;
 }
