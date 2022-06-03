@@ -4,6 +4,8 @@
 }
 
 .btn btn-add-to-cart-total {
+    display: flex;
+    justify-content: end;
     margin: 0 20px;
 }
 

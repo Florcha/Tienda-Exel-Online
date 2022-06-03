@@ -7,6 +7,7 @@ import ProductListContainer from "./components/containers/ProductListContainer";
 import { CartContextProvider } from "./context/CartContextProvider";
 import Form from "./components/common/Form";
 import PortadaPrincipal from "./components/common/PortadaPrincipal";
+import PurchaseContainer from "./components/containers/PurchaseContainer";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="product/:id" element={<ProductDetailContainer />} />
             <Route path="form" element={<Form />} />
             <Route path="cart" element={<Cart />} />
+            <Route path="purchase" element={<PurchaseContainer />} />
           </Routes>
         </BrowserRouter>      
       </CartContextProvider>

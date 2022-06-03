@@ -57,4 +57,8 @@ async function saveMessage(data) {
   return addDoc(collection(db, 'messages'), data);
 }
 
-export { getProducts, getProduct, saveMessage };
+async function saveCart(data) {
+  return addDoc(collection(db, 'cart'), data);
+}
+
+export { getProducts, getProduct, saveMessage, saveCart };

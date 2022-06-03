@@ -1,0 +1,19 @@
+.purchase_form {
+    width: 460px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #fbfbfb;
+    padding-left: 30px;
+  }
+  
+  .subtitle {
+    margin: 20px 0;
+    font-weight: bold;
+  }
+  
+  .obligatorio {
+    color: red;
+  }
