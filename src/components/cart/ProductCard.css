@@ -12,5 +12,8 @@
 
 .imgCard {
     width: 230px;
-    height: 300px !important;
+    height: 270px !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 }

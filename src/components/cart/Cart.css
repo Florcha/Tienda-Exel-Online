@@ -2,13 +2,23 @@
     margin: 50px;
     display: flex;
 }
-
+  
 .btn btn-add-to-cart-fn {
     margin: 0 20px;
 }
-
+  
 .divStyleDos {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.btn.btn-add-to-cart-uno {
+    margin: 5px 20px;
+    width: 150px;
+}
+  
+.btn.btn-add-to-cart-dos {
+    margin: 5px 20px;
+    width: 150px;
 }

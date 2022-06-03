@@ -13,9 +13,9 @@ const Cart = () => {
         {productList.length > 0 ? (
           <>
             <h1>Precio total: ${totalPrice()}</h1>
-            <button className="btn-btn-add-to-cart-fn" onClick={() => emptyCart()}>Vaciar Carrito</button>
+            <button className="btn btn-add-to-cart-uno" onClick={() => emptyCart()}>Vaciar Carrito</button>
             <Link to="/purchase">
-              <button className="btn-btn-add-to-cart-fn">Finalizar compra</button>
+              <button className="btn btn-add-to-cart-dos">Finalizar compra</button>
             </Link>
           </>
         ) : (
