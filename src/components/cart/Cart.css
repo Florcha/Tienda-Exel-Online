@@ -3,9 +3,7 @@
     display: flex;
 }
 
-.btn btn-add-to-cart-total {
-    display: flex;
-    justify-content: end;
+.btn btn-add-to-cart-fn {
     margin: 0 20px;
 }
 
