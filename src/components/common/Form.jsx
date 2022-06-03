@@ -35,7 +35,7 @@ export default function Form() {
         <div className="contact_form">
 
           <div className="formulario">
-            <h1>Formulario de Contacto</h1>
+            <h1>Formulario de contacto</h1>
             <h4>Escríbenos y en breve nos pondremos en contacto</h4>
 
             <form onSubmit={d => onSubmit(d)}>
