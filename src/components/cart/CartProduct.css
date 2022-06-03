@@ -1,0 +1,26 @@
+.card {
+    width: 350px; 
+    height: 500px;
+    justify-Content: center;
+    background-position: center center;
+}
+
+.card-img {
+    margin: auto;
+}
+
+h4 {
+    text-align: center;
+}
+
+.btn btn-add-to-cart-uno {
+    display: block; 
+    margin: 20px auto; 
+    width: 150px;
+}
+
+.btn btn-add-to-cart-dos {
+    display: block;
+    margin: auto;
+    width: 150px;
+}

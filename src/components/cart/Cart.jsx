@@ -1,22 +1,24 @@
 import { useCartContext } from "../../context/CartContextProvider";
 import CartProduct from "./CartProduct";
 
+import "./Cart.css";
+
 const Cart = () => {
   const { productList, emptyCart, totalPrice } = useCartContext();
 
   return (
     <>
-      <div style={{ margin: '50px', display: 'flex'}}>
+      <div className="divStyleUno">
         {productList.length > 0 ? (
           <>
             <h1>Precio total: ${totalPrice()}</h1>
-            <button className="btn btn-add-to-cart" style={{margin: '0 20px'}} onClick={() => emptyCart()}>Vaciar Carrito</button>
+            <button className="btn btn-add-to-cart-total" onClick={() => emptyCart()}>Vaciar Carrito</button>
           </>
         ) : (
           <h1>El carrito esta vacio</h1>
         )}
       </div>
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+      <div className="divStyleDos">
         {productList.map((item) => (
           <CartProduct key={item.id} product={item} />
         ))}

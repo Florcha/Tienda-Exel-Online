@@ -1,0 +1,14 @@
+.divStyleUno {
+    margin: 50px;
+    display: flex;
+}
+
+.btn btn-add-to-cart-total {
+    margin: 0 20px;
+}
+
+.divStyleDos {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
