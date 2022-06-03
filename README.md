@@ -2,9 +2,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+BioCosmética EXEL Exel is a smart cosmetics themed store for beauty, health and well-being.
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### Facility
+'$ npm install tienda-exel-online'
+Or also cloning the repository
+
+'$ git clone url'
 
 ### `npm start`
 
@@ -68,3 +76,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### How to contribute
+
+You can create a pull request to the project
+
+### License
+
+MIT
