@@ -17,3 +17,7 @@
   .obligatorio {
     color: red;
   }
+
+  .valid {
+    background-color: #5a4aec !important;
+  }

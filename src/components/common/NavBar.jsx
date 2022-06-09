@@ -29,7 +29,7 @@ const NavBar = () => {
           <Link to="/products/Corporal" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Corporal</Link>
           <Link to="/products/Cabello" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Cabello</Link>
           <Link to="form" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Contacto</Link>
-          <Link to="/cart/GoToCart" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">Carrito</Link>
+          <Link to="/cart" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">Carrito</Link>
         </div>
       </div>
     </nav>

@@ -61,8 +61,8 @@ label {
   margin-bottom: 20px;
   margin-top: 10px;
   text-transform: uppercase;
-  background-color:  grey !important;
-  border-color: black !important;
+  background-color:  grey;
+  border-color: black;
   border-style: solid;
   border-radius: 10px;
   width: 420px;
