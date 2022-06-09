@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-/*import { useCartContext } from "../../context/CartContextProvider";*/
 import { saveCart } from "../../jsonToFirestore";
 
 import './PurchaseInProgress.css';
@@ -9,6 +8,7 @@ const PurchaseInProgress = ({ productList, totalPrice, emptyCart }) => {
 
   let navigate = useNavigate();
 
+  const [validationFormClass, setValidationFormClass] = useState('');
   const [data, setData] = useState({
     name: '',
     email: '',
@@ -21,16 +21,18 @@ const PurchaseInProgress = ({ productList, totalPrice, emptyCart }) => {
   });
 
   function handleChange(evt) {
+    setValidationFormClass(evt.target.form.checkValidity() ? 'valid' : '');
     setData({ ...data, [evt.target.name]: evt.target.value });
   }
 
   async function onSubmit(e, list) {
     e.preventDefault();
     try {
-      saveCart({ ...data, cart: list });
-      navigate("/");
-      alert('Compra finalizada con éxito');
-      emptyCart();
+      saveCart({ ...data, cart: list }).then((response) => {
+        alert(`Su pedido ha sido registrado con el id: ${response.id}`);
+        navigate("/");
+        emptyCart();
+      });
     } catch (error) {
       console.error(error);
     }
@@ -92,7 +94,7 @@ const PurchaseInProgress = ({ productList, totalPrice, emptyCart }) => {
             <input type="text" name="phone" onChange={(evt) => handleChange(evt)} required placeholder="Escribe tu número de télefono" />
           </p>
 
-          <button className="btn-contact" type="submit"><p>Finalizar</p></button>
+          <button className={`btn-contact ${validationFormClass}`} type="submit"><p>Finalizar</p></button>
 
           <p className="aviso">
             <span className="obligatorio"> * </span>los campos son obligatorios.
