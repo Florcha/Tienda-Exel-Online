@@ -42,7 +42,7 @@ const PurchaseInProgress = ({ productList, totalPrice, emptyCart }) => {
     <>
       <div className="purchase_form">
         <h1>Finalizar compra</h1>
-        <h2 className="subtitle">Por favor rellene los datos de envio</h2>
+        <h2 className="subtitle">Por favor rellene los datos de envío</h2>
         <h2 className="subtitle">Precio total a pagar ${totalPrice}</h2>
         <form onSubmit={d => onSubmit(d, productList)}>
           <p>
@@ -58,7 +58,7 @@ const PurchaseInProgress = ({ productList, totalPrice, emptyCart }) => {
             <input type="text" name="email" onChange={(evt) => handleChange(evt)} required placeholder="Escribe tu nombre" />
           </p>
           <p>
-            <label htmlFor="nombre">Número de documento
+            <label htmlFor="nombre">DNI
               <span className="obligatorio">*</span>
             </label>
             <input type="number" name="dni" onChange={(evt) => handleChange(evt)} required placeholder="Escribe tu número de documento" />
@@ -76,7 +76,7 @@ const PurchaseInProgress = ({ productList, totalPrice, emptyCart }) => {
             <input type="text" name="locality" onChange={(evt) => handleChange(evt)} required placeholder="Escribe tu localidad" />
           </p>
           <p>
-            <label htmlFor="nombre">Código postal
+            <label htmlFor="nombre">Código Postal
               <span className="obligatorio">*</span>
             </label>
             <input type="text" name="postalCode" onChange={(evt) => handleChange(evt)} required placeholder="Escribe tu código postal" />
